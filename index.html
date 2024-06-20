@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>El Pollo Loco</title>
 
@@ -92,6 +93,132 @@
       <!--Start Screen-->
 
       <!--Win Screen-->
+      <div class="winScreenContainer d-none" id="winScreenContainer">
+        <h2>Congratulations You Win 👏👏👏😊</h2>
+        <div class="imgTrophyContainer">
+          <img src="img/winImg.png" alt="winImg" />
+        </div>
+        <div class="btnContainer">
+          <button
+            onclick="restartGmame()"
+            id="btnRestartWinScreen"
+            class="btnRestart"
+          >
+            Restart Game
+          </button>
+          <button
+            onclick="goBackToStartScreen()"
+            id="btnMainMenuWinScreen"
+            class="btnMainMenu"
+          >
+            Main Menu
+          </button>
+        </div>
+      </div>
+      <!--Win Screen-->
+
+      <!--Gameover Screen-->
+      <div
+        class="gameOverScreeenContainer d-none"
+        id="gameOverScreeenContainer"
+      >
+        <img
+          src="img/9_intro_outro_screens/game_over/you lost.png"
+          class="gameOverScreeen"
+          id="gameOverScreeen"
+        />
+
+        <div class="btnContainer">
+          <button
+            onclick="restartGmame()"
+            id="btnRestartGameOverScreen"
+            class="btnRestart"
+          >
+            Restart Game
+          </button>
+          <button
+            onclick="goBackToStartScreen()"
+            id="btnMainMenuGameOverScreen"
+            class="btnMainMenu"
+          >
+            Main Menu
+          </button>
+        </div>
+      </div>
+      <!--Gameover Screen-->
+
+      <!--Loading Screen-->
+      <div class="loadingScreenContainer hide" id="loadingScreenContainer">
+        <div class="containerWithTextAndIcon">
+          <h2>Loading</h2>
+          <img src="icons/hourglassIcon.png" />
+        </div>
+      </div>
+      <!--Loading Screen-->
     </div>
+
+    <!--Steering Menu-->
+    <div
+      class="containerGameControlls d-none"
+      id="containerGameControlls"
+      onclick="closeSteeringMenu()"
+    >
+      <img
+        src="icons/arrowBack.png"
+        class="arrowBack"
+        onclick="closeSteeringMenu()"
+        id="arrowBackGameControlls"
+      />
+
+      <h2>Game Controlls</h2>
+
+      <table>
+        <tr>
+          <td>
+            <img class="keyboardButton" src="icons/arrowLeft.png" />
+          </td>
+          <td>
+            <p class="keyboardIcon">Pepe More Left</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <img class="keyboardButton" src="icons/arrowRight.png" />
+          </td>
+          <td>
+            <p class="keyboardIcon">Pepe Move Right</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <img class="keyboardButton" src="icons/spaceButton.png" />
+          </td>
+          <td>
+            <p class="keyboardIcon">Pepe Jump</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <img class="keyboardButton" src="icons/letterA.png" />
+          </td>
+          <td>
+            <p class="keyboardIcon">Pepe Throw Bottle</p>
+          </td>
+        </tr>
+      </table>
+
+      <div class="infoDivContainer">
+        <img src="icons/infoIcon.png" class="infoIcon" />
+        <span class="infoText">
+          - If you stand behind the boss, the game is lost.
+          <br />
+          -With the bottles you can only kill the final boss.
+        </span>
+      </div>
+    </div>
+    <!--Steering Menu-->
   </body>
 </html>
