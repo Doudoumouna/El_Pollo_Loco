@@ -2,9 +2,10 @@ let level1;
 
 /**
  * This Function init the whole Level.
+ *
  */
 function initLevel() {
-  level1 = new level1(
+  level1 = new Level(
     createAnimal(),
     createEndboss(),
     createClouds(),
@@ -30,7 +31,7 @@ function createAnimal() {
 }
 
 function createEndboss() {
-  return [new createEndboss()];
+  return [new Endboss()];
 }
 
 function createClouds() {
@@ -60,10 +61,10 @@ function createBackground() {
     new BackgroundObject('img/5_background/layers/2_second_layer/1.png', 0),
     new BackgroundObject('img/5_background/layers/1_first_layer/1.png', 0),
 
-    new BackgroundObject('img/5_background/layers/air.png', -819),
-    new BackgroundObject('img/5_background/layers/3_third_layer/2.png', -819),
-    new BackgroundObject('img/5_background/layers/2_second_layer/2.png', -819),
-    new BackgroundObject('img/5_background/layers/1_first_layer/2.png', -819),
+    new BackgroundObject('img/5_background/layers/air.png', 819),
+    new BackgroundObject('img/5_background/layers/3_third_layer/2.png', 819),
+    new BackgroundObject('img/5_background/layers/2_second_layer/2.png', 819),
+    new BackgroundObject('img/5_background/layers/1_first_layer/2.png', 819),
 
     new BackgroundObject('img/5_background/layers/air.png', 819 * 2),
     new BackgroundObject(

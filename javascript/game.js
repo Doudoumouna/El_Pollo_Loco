@@ -4,11 +4,11 @@ let keyboard = new Keyboard();
 let audioBackgroundMusicInGame = new Audio('audio/backgroundMusic.mp3');
 let audioWalkCharacter = new Audio('audio/running.mp3');
 let audioJumpCharacter = new Audio('audio/jump.mp3');
-let audioHurtCharacter = new Audio('audio/hit.mp3');
+let auidoHurtCharacter = new Audio('audio/hit.mp3');
 let audioGameLost = new Audio('audio/gameOver.mp3');
-let audioCoinCollected = new Audio('audio/collectionCoins.mp3');
+let audioCoinCollected = new Audio('audio/collectcoinCoins.mp3');
 let audioBottleCollected = new Audio('audio/collectcoinThroebel.mp3');
-let audioThrowBottle = new Audio('audio/BottleThrow.mp3');
+let audioThrowBottle = new Audio('audio/BottelThrow.mp3');
 let audioSplashBottle = new Audio('audio/glass.mp3');
 let audioGameWin = new Audio('audio/win.mp3');
 let audioDeadChicken = new Audio('audio/chickenDeath.mp3');
@@ -16,7 +16,8 @@ let audioBackgroundMusicEndboss = new Audio('audio/EndbossMusic.mp3');
 let intervalIds = [];
 
 /**
- * This function start the Game
+ *
+ *
  */
 function startGame() {
   showLoadingScreen();
@@ -77,11 +78,11 @@ function showMobileBtns() {
  * Lets show the fullscreen button
  */
 function showFullscreenBtn() {
-  document.getElementById('enterFulscreenIcon').classList.remove('d-none');
+  document.getElementById('enterFullscreenIcon').classList.remove('d-none');
 }
 
 /**
- * Plays the background music
+ * plays the background music
  */
 function playBackgroundMusic() {
   audioBackgroundMusicInGame.volume = 0.2;
@@ -100,6 +101,7 @@ function restartGame() {
   startGame();
   document.getElementById('canvas').classList.remove('d-none');
 }
+
 /**
  * The game will exit and the start screen will be displayed
  */

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset=" UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>El Pollo Loco</title>
@@ -13,7 +13,7 @@
 
     <script src="models/world.class.js"></script>
     <script src="models/keyboard.class.js"></script>
-    <script src="javascript/games.js"></script>
+    <script src="javascript/game.js"></script>
     <script src="models/level.class.js"></script>
     <script src="levels/level1.js"></script>
     <script src="models/drawable-object.class.js"></script>
@@ -34,17 +34,18 @@
     <script src="models/background-object.class.js"></script>
     <script src="models/endboss.class.js"></script>
   </head>
+
   <body>
     <h1>El Pollo Loco</h1>
 
     <!--Info Smartphone-->
     <div class="infoForTheSmartphonDiv" id="infoForTheSmartphonDiv">
-      <span class="infoForTheSmartphonDiv">Please turn over your phone</span>
+      <span class="infoTextSmartphone"> Please turn over your phone </span>
     </div>
-    <!--info Smartphone-->
+    <!--Info Smartphone-->
 
     <div class="positionRelative" id="fullScreen">
-      <canvas width="820" height="480" id="canvas" class="d-none"></canvas>
+      <canvas width="820" height="480" id="canvas" class="d-none"> </canvas>
 
       <!--Sound Btns-->
       <img
@@ -53,7 +54,7 @@
         src="icons/audioOffIcon.png"
         onclick="toggleMute()"
       />
-      <!--Soiund Btns-->
+      <!--Sound Btns-->
 
       <!--Fullscreen Btns-->
       <img
@@ -94,12 +95,13 @@
       <!--Mobile Buttons-->
 
       <!--Start Screen-->
-      <div>
+      <div class="startScreenContainer">
         <img
           src="img/9_intro_outro_screens/start/startscreen_2.png"
           class="startScreen"
           id="startScreen"
         />
+        <div class="mainTitle"><h1>Welcome to the Game</h1></div>
         <img
           src="icons/playButton.png"
           class="btnPlay"
@@ -117,13 +119,13 @@
 
       <!--Win Screen-->
       <div class="winScreenContainer d-none" id="winScreenContainer">
-        <h2>Congratulations You Win 👏👏👏😊</h2>
+        <h2>Congratulations You Win !</h2>
         <div class="imgTrophyContainer">
-          <img src="img/winImg.png" alt="winImg" />
+          <img src="img/winImg.png" />
         </div>
         <div class="btnContainer">
           <button
-            onclick="restartGmame()"
+            onclick="restartGame()"
             id="btnRestartWinScreen"
             class="btnRestart"
           >
@@ -141,19 +143,15 @@
       <!--Win Screen-->
 
       <!--Gameover Screen-->
-      <div
-        class="gameOverScreeenContainer d-none"
-        id="gameOverScreeenContainer"
-      >
+      <div class="gameOverScreenContainer d-none" id="gameOverScreenContainer">
         <img
           src="img/9_intro_outro_screens/game_over/you lost.png"
-          class="gameOverScreeen"
-          id="gameOverScreeen"
+          class="gameOverScreen"
+          id="gameOverScreen"
         />
-
         <div class="btnContainer">
           <button
-            onclick="restartGmame()"
+            onclick="restartGame()"
             id="btnRestartGameOverScreen"
             class="btnRestart"
           >
@@ -161,7 +159,7 @@
           </button>
           <button
             onclick="goBackToStartScreen()"
-            id="btnMainMenuGameOverScreen"
+            id="btnMainMenuGamOverScreen"
             class="btnMainMenu"
           >
             Main Menu
@@ -201,7 +199,7 @@
             <img class="keyboardButton" src="icons/arrowLeft.png" />
           </td>
           <td>
-            <p class="keyboardIcon">Pepe More Left</p>
+            <p class="keyboardIcon">Pepe Move Left</p>
           </td>
         </tr>
 
@@ -238,7 +236,7 @@
         <span class="infoText">
           - If you stand behind the boss, the game is lost.
           <br />
-          -With the bottles you can only kill the final boss.
+          - With the bottles you can only kill the final boss.
         </span>
       </div>
     </div>
